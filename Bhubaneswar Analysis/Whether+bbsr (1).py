@@ -1,12 +1,13 @@
 
 # coding: utf-8
 
-# In[3]:
+# In[15]:
 
 #This function is the analysis report of bhubaneswar whether
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
+import matplotlib.style as style
 df = pd.read_csv('PIC_bbsrtemperature.csv')
 
 ac=df['High']
@@ -39,14 +40,15 @@ plt.ylabel('Temperature')
 plt.title('Bhubaneswar 2018 Temperature')
 
 ax.set_xticks(Y)
-ax.set_xticklabels(bd,rotation=30)
+
+ax.set_xticklabels(bd,rotation=30,color='navy')
 
 
 for i,j in df.High.items():
     ax.annotate(str(j), xy=(i, j))
 
 plt.show()
-df
+
 
 
 # ### October to March is found to be the best period to travel Bhubaneswar .While June is the hottest month of the year wih 42degree Celcius.April To September is consdered the hottest period of the whole year.
